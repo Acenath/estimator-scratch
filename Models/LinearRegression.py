@@ -96,14 +96,14 @@ class LinearRegression():
         plt.plot(np.arange(self.n_iteration), np.array(self.cost_history))
         plt.xlabel("Number of iterations")
         plt.ylabel("Cost function (MSE)")
-        Figures_dir = os.path.abspath("./Figures")
+        Figures_dir = os.path.abspath("./Figures/Regression_plots/learning_curve.png")
         plt.savefig(Figures_dir)
 
     
 
 
 if __name__ == "__main__":
-    model = LinearRegression(10000000, 0.001)
+    model = LinearRegression(100, 0.001)
     X = np.array([[1,2,3], [4,5,6]])
     y = np.array([1, 2])
     model.fit(X, y)
