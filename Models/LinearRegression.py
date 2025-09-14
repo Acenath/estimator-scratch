@@ -59,7 +59,7 @@ class LinearRegression():
     
     def __initialize_weights(self, X_train, lower, upper):
         _, n = X_train.shape
-        self.w = np.zeros((n, ))
+        self.w = np.ones((n, ))
         for j in range(n):
             self.w[j] += np.random.randint(lower, upper)
         
@@ -105,7 +105,7 @@ class LinearRegression():
 if __name__ == "__main__":
     model = LinearRegression(100, 0.001)
     X = np.array([[1,2,3], [4,5,6]])
-    y = np.array([1, 2])
+    y = np.array([0, 1])
     model.fit(X, y)
     model.plot_learning_curve()
     pass
