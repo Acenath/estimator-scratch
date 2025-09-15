@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 class LinearRegression():
-    def __init__(self, n_iteration, learning_rate = 0.01, lambda_ = 1):
+    def __init__(self, n_iteration = 100, learning_rate = 0.01, lambda_ = 1):
         """ Simple constructor
         """
         self.n_iteration = n_iteration
